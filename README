@@ -1,0 +1,8 @@
+Download the .rar file and extract it .
+open it on vs code. 
+create virtualenv.  virtualenv venv
+activate virtualenv.
+install requiements.text . pip install requiements
+python manage.py runserver. 
+check it on local port 8000.
+every this is dynamic.
