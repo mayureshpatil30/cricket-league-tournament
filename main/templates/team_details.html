@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<style>
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+</style>
+<h2>Team Details</h2>
+<h3> <img src="{{ object.logo_url.url }}" width="50" height="50" alt="img"> {{ object.name }} </h3>
+<table class="table table-bordered table-hovered " cellspacing='0' style="margin-left: 30px;">
+    <tr>
+        <th>Player</th>
+        <th>Country</th>
+    </tr>
+    {% for each in team_details %}
+    <tr>
+        <td><img src="{{ each.image_url.url }}" width="40" height="40" alt="img"> <a
+                href="{% url 'main:player_details' pk=each.id %}"> {{ each.get_fullname }}</td> </a>
+        <td>{{ each.Country }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

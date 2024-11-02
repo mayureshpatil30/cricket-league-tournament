@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<style>
+    h2 {
+        text-align: center;
+    }
+</style>
+<h2>
+    </h2class>All Teams</h2>
+<table>
+    {% for each in team_list %}
+    <tr>
+        <td><img src="{{ each.logo_url.url }}" width="30" height="30" alt="img"><a
+                href="{% url 'main:team_details' pk=each.id %}"> {{ each.name }}</td></a>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

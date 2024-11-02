@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<style>
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+</style>
+<h2>Player Details</h2>
+<table class="table table-bordered table-hovered " cellspacing='0' style="margin-left: 30px;">
+    <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Jersey Number</th>
+        <th> Matches</th>
+        <th>Runs</th>
+        <th>Highest Score</th>
+        <th>Fifties</th>
+        <th>Hundreds</th>
+    </tr>
+    
+    <tr>
+        <td><img src="{{ player.image_url.url }}" width="40" height="40" alt="img"> {{ player.get_fullname }}</td> </a>
+        <td>{{ player.Country }}</td>
+        <td>{{ player.player_jersey_no }}</td>
+        <td>{{ player.matches }}</td>
+        <td>{{ player.run }}</td>
+        <td>{{ player.highest_score }}</td>
+        <td>{{ player.fifties }}</td>
+        <td>{{ player.hundreds }}</td>
+    </tr>
+    
+</table>
+
+
+
+
+
+
+{% endblock %}
